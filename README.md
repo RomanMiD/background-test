@@ -16,6 +16,6 @@ npm start
 переходим [http://localhost:4200](http://localhost:4200)
 
 
-Само задание тут [zadanie.pdf](https://github.com/RomanMiD/background-test/blob/1494f3487af48c92f577a73cad6acd36c0bc1f63/zadanie.pdf) 
+Само задание тут [zadanie.docx](https://github.com/RomanMiD/background-test/blob/21c205c88deaa9c06fa4ebb03a4398317b26ee9b/zadanie.docx) 
 
 ## Проверено и работает в Chrome.
