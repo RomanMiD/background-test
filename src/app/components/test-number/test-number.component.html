@@ -1,0 +1,20 @@
+<div class="form-element">
+  <div class="label-wrapper">
+    <label>{{elementFormData?.label}}<span *ngIf="elementFormData?.required">*</span></label>
+  </div>
+  <div class="number-element-wrapper">
+    <input [value]="value"
+           (change)="onChange($any($event.target).value)"
+           (blur)="onTouched()"
+           [disabled]="disabled"
+           type="number">
+    <div class="btns">
+      <button class="number-form-btn top"
+              (click)="updateValue(+value + 1)">▲
+      </button>
+      <button class="number-form-btn bottom"
+              (click)="updateValue(+value - 1)">▼
+      </button>
+    </div>
+  </div>
+</div>

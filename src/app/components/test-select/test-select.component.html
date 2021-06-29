@@ -1,0 +1,22 @@
+<div class="form-element">
+  <div class="label-wrapper">
+    <label>{{elementFormData!.label}}<span *ngIf="elementFormData?.required">*</span></label>
+  </div>
+  <div class="select-element-wrapper">
+    <ng-select [items]="choices"
+               (change)="onChange($event.value)"
+               (blur)="onTouched()"
+               bindLabel="label">
+    </ng-select>
+  </div>
+</div>
+
+<!--<select [value]="value"-->
+<!--        (change)="onChange($any($event.target).value)"-->
+<!--        (blur)="onTouched()"-->
+<!--        [disabled]="disabled">-->
+<!--  <option *ngFor="let choice of elementFormData?.choices">-->
+<!--    <label class="option-label">{{choice.label}}-->
+<!--    </label>-->
+<!--  </option>-->
+<!--</select>-->

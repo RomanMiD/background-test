@@ -1,0 +1,36 @@
+<div class="form-element">
+  <div class="label-wrapper">
+    <label>{{elementFormData?.label}}<span *ngIf="elementFormData?.required">*</span></label>
+  </div>
+  <div class="input-element-wrapper">
+    <ng-container *ngIf="!isMultiple; else multiple">
+      <input type="text"
+             [placeholder]="elementFormData?.placeholder || ''"
+             [value]="value"
+             (input)="onChange($any($event.target).value)"
+             [disabled]="disabled">
+    </ng-container>
+    <ng-template #multiple>
+      <ng-container *ngFor="let valueItem of value; let i= index">
+        <input type="text"
+               [ngStyle]="{marginBottom: '10px'}"
+               [placeholder]="elementFormData?.placeholder || ''"
+               [value]="value[i]"
+               (change)="multipleItemChange($any($event.target).value, i)"
+               [disabled]="disabled">
+      </ng-container>
+      <div class="input-btns">
+        <div class="btn" *ngIf="valueCount!>1">
+        <app-remove-button (click)="removeItem()"></app-remove-button>
+        </div>
+        <div class="btn">
+        <app-add-button *ngIf="isMultiple" (click)="addItem()"></app-add-button>
+        </div>
+
+      </div>
+    </ng-template>
+    <div *ngIf="description" class="description">{{description}}</div>
+  </div>
+
+
+</div>

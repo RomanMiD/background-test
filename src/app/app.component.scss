@@ -1,0 +1,32 @@
+@import "~src/styles/variables";
+
+.form-wrapper {
+  display: block;
+  margin: 5% 15%;
+  width: 70%;
+  text-align: left;
+  .btn {
+    border-radius: 3px;
+    border: none;
+    width: 139px;
+    height: 52px;
+    display: block;
+    position: relative;
+    margin: 30px 0 0 170px;
+    box-shadow: 0 1px 0 0 $button-box-shadow;
+    &:enabled {
+      background-color: $primary-color;
+    }
+
+    &:hover {
+      opacity: 0.7;
+
+    }
+
+    &:disabled {
+      background: #FFE783;
+    }
+  }
+}
+
+

@@ -1,0 +1,38 @@
+@import "~src/styles/variables";
+
+.number-element-wrapper{
+  display: flex;
+  input[type="number"] {
+    -moz-appearance: textfield;
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  }
+  .btns{
+    .number-form-btn{
+      display: flex;
+      color: #9D9D9D;
+      background: $number-btn-bg;
+      border: 0 ;
+      margin: 1px;
+
+      &.top{
+
+        box-shadow: 0 1px 0 0 $arrow-box-shadow;
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;}
+      &.bottom{
+        box-shadow: 0px -1px 0px 0px $arrow-box-shadow;
+        border-bottom-left-radius: 3px;
+        border-bottom-right-radius: 3px;
+      }
+      &:hover{
+        opacity: $arrow-opacity;
+      }
+    }
+  }
+}
+
+

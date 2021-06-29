@@ -1,0 +1,24 @@
+<div class="form-element">
+  <ng-container *ngIf="elementFormData?.choices as choices" class="choices">
+    <div class="label-wrapper">
+      <label>{{elementFormData?.label}}<span *ngIf="elementFormData?.required">*</span> </label>
+    </div>
+    <div class="checkbox-element-wrapper">
+    <ng-container *ngFor="let choice of choices">
+      <label class="choice">
+        <input type="checkbox"
+               class="check__input"
+               (change)="onChange($any($event.target).value)"
+               (blur)="onTouched()"
+               [disabled]="disabled"
+               [required]="choice?.required"
+               [checked]="choice.checked"
+               [value]="choice.value">
+        <span class="check__box"></span>
+        {{choice.label}}<span *ngIf="choice?.required">*</span></label>
+    </ng-container>
+    </div>
+  </ng-container>
+
+</div>
+

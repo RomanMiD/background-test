@@ -1,0 +1,69 @@
+@import "~src/styles/variables";
+
+$required-color: red;
+$input-size: 500px;
+$label-size-width: 140px;
+
+.form-element {
+  display: flex;
+  margin-top: 15px;
+  .label-wrapper {
+    label {
+      span {
+        color: $required-color;
+        font-size: 1em;
+        font-weight: bold;
+      }
+    }
+  }
+
+  input[type="number"],
+  input[type="text"],
+  input[type="select"] {
+    width: 100%;
+    border-radius: $border-radius;
+    border: $input-border;
+    height: 44px;
+    box-sizing: border-box;
+  }
+  input[type="number"]{
+    width: 37%;
+  }
+  .input-element-wrapper,
+  .number-form-wrapper,
+  .select-element-wrapper,
+  .checkbox-element-wrapper {
+    flex-basis: $input-size
+  }
+  .checkbox-element-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .input-element-wrapper{
+    .description{
+      position: relative;
+      margin-top: 10px;
+      width: 300px;
+      height: 24px;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 13px;
+      line-height: 17px;
+
+      color: #9D9D9D;
+
+
+    }
+  }
+
+  label {
+    font-size: 17px;
+    line-height: 22px;
+    display: block;
+    margin: 10px;
+    width: $label-size-width;
+    height: content-box;
+  }
+
+}
+

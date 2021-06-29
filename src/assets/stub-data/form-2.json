@@ -1,0 +1,85 @@
+{
+  "testForm": [
+    {
+      "name": "name",
+      "type": "testInput",
+      "label": "Имя",
+      "required": true
+    },
+    {
+      "name": "skills",
+      "type": "testCheckbox",
+      "label": "Навыки",
+      "description": "Skills",
+      "required": true,
+      "choices": [
+        {
+          "value": "someSkill1",
+          "checked": false,
+          "label": "someSkill1"
+        },
+        {
+          "value": "someSkill2",
+          "checked": false,
+          "label": "someSkill2"
+        },  {
+          "value": "someSkill3",
+          "checked": false,
+          "label": "someSkill4"
+        },
+        {
+          "value": "someSkill4",
+          "checked": false,
+          "label": "someSkill4"
+        }
+      ]
+    },
+    {
+      "name": "age",
+      "type": "testNumber",
+      "label": "Возраст",
+      "required": true
+    },
+    {
+      "name": "family",
+      "type": "testSelect",
+      "label": "Семейное положение",
+      "choices": [
+        {
+          "value": "married",
+          "label": "Женат / замужем"
+        },
+        {
+          "value": "single",
+          "label": "Не женат / не замужем"
+        }
+      ],
+      "required": true
+    },
+    {
+      "name": "study",
+      "type": "testInput",
+      "canExpand": true,
+      "label": "Место учебы",
+      "placeholder": "Например, такой-то ВУЗ",
+      "description": "Укажите места, где вы учились",
+      "required": false
+    },
+    {
+      "name": "birthPlace",
+      "type": "testSelect",
+      "label": "Место рождения",
+      "choices": [
+        {
+          "value": "Country Z",
+          "label": "Страна Z"
+        },
+        {
+          "value": "Country Y",
+          "label": "Страна Y"
+        }
+      ],
+      "required": false
+    }
+  ]
+}

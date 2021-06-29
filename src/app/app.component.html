@@ -1,0 +1,24 @@
+<div class="form-wrapper">
+  <form [formGroup]="testForm">
+    <ng-container *ngIf="(formsData$| async) as forms">
+      <ng-container *ngFor="let formElement of forms.testForm">
+        <ng-container [ngSwitch]="formElement.type">
+          <ng-container *ngSwitchCase="formTypes.Checkbox">
+            <app-test-checkbox [formControlName]="formElement.name" [elementFormData]="formElement"></app-test-checkbox>
+          </ng-container>
+          <ng-container *ngSwitchCase="formTypes.Input">
+            <app-test-input  [formControlName]="formElement.name" [elementFormData]="formElement"></app-test-input>
+          </ng-container>
+          <ng-container *ngSwitchCase="formTypes.Number">
+            <app-test-number [formControlName]="formElement.name" [elementFormData]="formElement"></app-test-number>
+          </ng-container>
+          <ng-container *ngSwitchCase="formTypes.Select">
+            <app-test-select [formControlName]="formElement.name" [elementFormData]="formElement"></app-test-select>
+          </ng-container>
+        </ng-container>
+      </ng-container>
+    </ng-container>
+    <button [disabled]="testForm.invalid" (click)="onSubmit()"  class="btn" > Отправить</button>
+  </form>
+</div>
+

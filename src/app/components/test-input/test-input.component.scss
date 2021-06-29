@@ -1,0 +1,13 @@
+.input-btns{
+  position: absolute;
+  left: 54%;
+  margin-top: 5px;
+  display: inline-block;
+  .btn{
+    float: left;
+    margin: auto;
+    text-align: center;
+    padding: 5px;
+  }
+}
+
